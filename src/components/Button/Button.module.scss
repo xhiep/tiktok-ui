@@ -2,14 +2,14 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 9px 16px;
+    padding: 7px 16px;
     min-width: 100px;
     border-radius: 4px;
     font-weight: 700;
     font-size: 1.6rem;
     cursor: pointer;
     background-color: var(--white);
-    border: 1px solid var(--primary);
+    border: 1px solid transparent;
     user-select: none;
     + .wrapper {
         margin-left: 16px;
@@ -21,6 +21,9 @@
 }
 .icon {
     color: black;
+    display: inline-block;
+    width: 24px;
+    text-align: center;
 }
 //button types
 .rounded {

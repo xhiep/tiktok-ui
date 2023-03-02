@@ -4,7 +4,9 @@ import Tippy from '@tippyjs/react/headless';
 import { IoMdCloseCircle } from 'react-icons/io';
 import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 import { BiSearch } from 'react-icons/bi';
+import { IoMdAdd } from 'react-icons/io';
 
+import Button from '~/components/Button';
 import styles from './Header.module.scss';
 import images from '~/assets/images';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
@@ -50,8 +52,13 @@ function Header() {
                             <BiSearch className={cx('search-icon')} />
                         </button>
                     </div>
-                </Tippy>
-                <div className={cx('action')}></div>
+                </Tippy>{' '}
+                <div className={cx('actions')}>
+                    <Button black leftIcon={<IoMdAdd />}>
+                        Upload
+                    </Button>
+                    <Button primary>Log in</Button>
+                </div>
             </div>
         </header>
     );

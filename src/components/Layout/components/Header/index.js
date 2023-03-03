@@ -1,9 +1,6 @@
 import classNames from 'classnames/bind';
-import { useEffect, useState } from 'react';
 import Tippy from '@tippyjs/react';
-import HeadlessTippy from '@tippyjs/react/headless';
-import { IoMdCloseCircle } from 'react-icons/io';
-import { AiOutlineLoading3Quarters, AiOutlineSetting } from 'react-icons/ai';
+import { AiOutlineSetting } from 'react-icons/ai';
 import { BiHelpCircle } from 'react-icons/bi';
 import { IoMdAdd } from 'react-icons/io';
 import { GrLanguage } from 'react-icons/gr';
@@ -14,12 +11,11 @@ import { RiCoinLine } from 'react-icons/ri';
 
 import Button from '~/components/Button';
 import styles from './Header.module.scss';
-import { Wrapper as PopperWrapper } from '~/components/Popper';
-import AccountItem from '~/components/AccountItem';
 import Menu from '~/components/Popper/Menu';
 import 'tippy.js/dist/tippy.css';
 import Image from '~/components/Image';
-import { InboxIcon, LogoIcon, MenuIcon, MessageIcon, SearchIcon } from '~/components/icon';
+import { InboxIcon, LogoIcon, MenuIcon, MessageIcon } from '~/components/icon';
+import Search from '../Search';
 
 const cx = classNames.bind(styles);
 
@@ -55,15 +51,7 @@ const MENU_ITEMS = [
 ];
 
 function Header() {
-    const [searchResult, setSearchResult] = useState([]);
-
     const currentUser = true;
-
-    useEffect(() => {
-        setTimeout(() => {
-            setSearchResult([]);
-        }, 0);
-    }, [searchResult]);
 
     //hanlde logic
     const handleMenuChange = (menuItem) => {
@@ -103,33 +91,8 @@ function Header() {
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
                 <LogoIcon className={cx('logo-icon')} />
-                <HeadlessTippy
-                    interactive
-                    visible={searchResult.length > 0}
-                    render={(attrs) => (
-                        <div className={cx('search-result')} tabIndex="-1" {...attrs}>
-                            <PopperWrapper>
-                                <h4 className={cx('search-title')}>Account</h4>
-                                <AccountItem />
-                                <AccountItem />
-                                <AccountItem />
-                                <AccountItem />
-                            </PopperWrapper>
-                        </div>
-                    )}
-                >
-                    <div className={cx('search')}>
-                        <input placeholder="Search accounts and videos" spellCheck={false} />
-                        <button className={cx('clear')}>
-                            <IoMdCloseCircle />
-                        </button>
-                        <AiOutlineLoading3Quarters className={cx('loading')} />
 
-                        <button className={cx('search-btn')}>
-                            <SearchIcon width="2.4rem" height="2.4rem" />
-                        </button>
-                    </div>
-                </HeadlessTippy>
+                <Search />
 
                 <div className={cx('actions')}>
                     {currentUser ? (
@@ -146,6 +109,7 @@ function Header() {
                             <Tippy delay={[0, 200]} content="Inbox" placement="bottom">
                                 <button className={cx('action-InboxIcon')}>
                                     <InboxIcon />
+                                    <span className={cx('badge')}>12</span>
                                 </button>
                             </Tippy>
                         </p>
@@ -161,9 +125,9 @@ function Header() {
                         {currentUser ? (
                             <Image
                                 className={cx('user-avatar')}
-                                src="https://ap9-sign-sg.tiktokcdn.com/aweme/720x720/tos-alisg-avt-0068/fc4d0a690a5451ca8250db4d127dd565.jpeg?x-expires=1678003200&x-signature=JH7%2FdmSG1rr5fBduW6jfSCOlK7s%3D"
+                                src="https://lh3.googleusercontent.com/ogw/AAEL6siWFWNi6PXqdGyv61d6CaQRj189HubUl0P7EC-14w=s32-c-mo"
                                 alt="avatar"
-                                fallBack="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/3fc4e1df5ffdbc87b883bd57e65f9c64~c5_100x100.jpeg?x-expires=1678006800&x-signature=JWO9vTz%2B70lCQJqVphvlu%2FLeABk%3D"
+                                // fallBack="https://lh3.googleusercontent.com/ogw/AAEL6sh7MYd-FvtAMlsGTX7Ww3c_1HX1S9fkHaq8pPjnvw=s32-c-mo"
                             />
                         ) : (
                             <button className={cx('more-btn')}>

@@ -1,13 +1,14 @@
 import classNames from 'classnames/bind';
 import styles from './AccountItem.module.scss';
 import { AiFillCheckCircle } from 'react-icons/ai';
+import Image from '~/components/Image';
 
 const cx = classNames.bind(styles);
 
 function AccountItem() {
     return (
         <div className={cx('wrapper')}>
-            <img
+            <Image
                 className={cx('avatar')}
                 alt="hoaa"
                 src="https://p16-sign-sg.tiktokcdn.com/aweme/100x100/tos-alisg-avt-0068/60d73bdf902745a729efb69340c55e06.jpeg?x-expires=1677913200&x-signature=%2FpH5eLb7IbJau8M3Rwl2ilhrz7w%3D"

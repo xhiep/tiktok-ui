@@ -16,13 +16,16 @@
     width: 100%;
     justify-content: flex-start;
     border-radius: 0;
-    font-weight: 550;
+    font-weight: 600;
     padding: 8px 16px;
     color: var(--black);
     line-height: 2.2rem;
     &:hover {
         background: rgba(22, 24, 35, 0.03);
         color: var(--black);
+    }
+    &.separate {
+        border-top: 1px solid rgba(22, 24, 35, 0.12);
     }
 }
 //Header

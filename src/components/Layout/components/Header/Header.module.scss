@@ -10,6 +10,7 @@
     justify-content: center;
 }
 .inner {
+    padding: 0 var(--default-layout-horizontal-spacer);
     height: 100%;
     width: var(--default-layout-width);
     display: flex;
@@ -95,8 +96,9 @@
     margin-top: 10px;
 }
 .more-btn {
+    cursor: pointer;
     font-size: 2rem;
-    margin-left: 24px;
+    margin-left: 16px;
     background-color: transparent;
     padding: 4px 8px 8px;
 }

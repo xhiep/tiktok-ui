@@ -21,6 +21,21 @@ const MENU_ITEMS = [
     {
         icon: <GrLanguage />,
         title: 'English',
+        children: {
+            title: 'language',
+            data: [
+                {
+                    type: 'language',
+                    code: 'en',
+                    title: 'English',
+                },
+                {
+                    type: 'language',
+                    code: 'vi',
+                    title: 'Tiếng Việt',
+                },
+            ],
+        },
     },
     {
         icon: <BiHelpCircle />,
@@ -41,6 +56,17 @@ function Header() {
             setSearchResult([]);
         }, 0);
     }, [searchResult]);
+
+    //hanlde logic
+    const handleMenuChange = (menuItem) => {
+        switch (menuItem.type) {
+            case 'language':
+                //hanlde change language
+                break;
+            default:
+        }
+    };
+
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
@@ -78,7 +104,7 @@ function Header() {
                     </Button>
                     <Button primary>Log in</Button>
 
-                    <Menu items={MENU_ITEMS}>
+                    <Menu items={MENU_ITEMS} onChange={handleMenuChange}>
                         <button className={cx('more-btn')}>
                             <img src={images.menu} alt="menu" className={cx('menu-icon')} />
                         </button>

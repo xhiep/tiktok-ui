@@ -90,7 +90,9 @@ function Header() {
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
-                <LogoIcon className={cx('logo-icon')} />
+                <a href="/" className={cx('logo-icon')}>
+                    <LogoIcon />
+                </a>
 
                 <Search />
 

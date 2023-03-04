@@ -17,8 +17,11 @@
     align-items: center;
     justify-content: space-between;
 }
-.logo-icon {
-    cursor: pointer;
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--black);
 }
 //btn
 .more-btn {
@@ -36,6 +39,12 @@
     align-items: center;
     justify-content: center;
 }
+
+.action-MessageIcon,
+.action-InboxIcon {
+    cursor: pointer;
+}
+
 .action-MessageIcon {
     padding: 3px 4px;
 }
@@ -54,7 +63,7 @@
     font-size: 1.4rem;
     font-weight: 600;
     color: var(--white);
-    font-family: 'ProximaNova', sans-serif;
+    font-family: var(--font-family);
     background-color: var(--primary);
 }
 .action-InboxIcon,
@@ -68,6 +77,7 @@
     align-items: center;
 }
 .user-avatar {
+    cursor: pointer;
     width: 32px;
     height: 32px;
     object-fit: cover;

@@ -3,7 +3,6 @@ import styles from './Search.module.scss';
 import { useEffect, useState, useRef } from 'react';
 import HeadlessTippy from '@tippyjs/react/headless';
 import { IoMdCloseCircle } from 'react-icons/io';
-import axios from 'axios';
 
 import * as searchService from '~/apiService/searchService';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
@@ -36,7 +35,7 @@ function Search() {
             const result = await searchService.search(debouncedSearchValue);
             setSearchResult(result);
 
-            setLoading(true);
+            setLoading(false);
         };
         fetchApi();
     }, [debouncedSearchValue]);
@@ -50,7 +49,10 @@ function Search() {
         setShowResult(false);
     };
     const handleChangeValue = (e) => {
-        setSearchValue(e.target.value === ' ' ? '' : e.target.value);
+        const searchValue = e.target.value;
+        if (!searchValue.startsWith(' ')) {
+            setSearchValue(searchValue);
+        }
     };
 
     return (
@@ -85,7 +87,7 @@ function Search() {
                 )}
                 {loading && <AiOutlineLoading3Quarters className={cx('loading')} />}
 
-                <button className={cx('search-btn')}>
+                <button className={cx('search-btn')} onMouseDown={(e) => e.preventDefault()}>
                     <SearchIcon width="2.4rem" height="2.4rem" />
                 </button>
             </div>

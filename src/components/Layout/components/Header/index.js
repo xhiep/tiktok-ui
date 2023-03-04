@@ -8,7 +8,9 @@ import { RxKeyboard } from 'react-icons/rx';
 import { FiLogOut } from 'react-icons/fi';
 import { CgProfile } from 'react-icons/cg';
 import { RiCoinLine } from 'react-icons/ri';
+import { Link } from 'react-router-dom';
 
+import routesConfig from '~/config/routes';
 import Button from '~/components/Button';
 import styles from './Header.module.scss';
 import Menu from '~/components/Popper/Menu';
@@ -90,9 +92,9 @@ function Header() {
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
-                <a href="/" className={cx('logo-icon')}>
+                <Link className={cx('logo-link')} to={routesConfig.home}>
                     <LogoIcon />
-                </a>
+                </Link>
 
                 <Search />
 

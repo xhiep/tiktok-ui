@@ -4,7 +4,7 @@ import { useEffect, useState, useRef } from 'react';
 import HeadlessTippy from '@tippyjs/react/headless';
 import { IoMdCloseCircle } from 'react-icons/io';
 
-import * as searchService from '~/apiService/searchService';
+import * as searchService from '~/Service/searchService';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 import AccountItem from '~/components/AccountItem';
 import useDebounce from '~/hooks/useDebounce';

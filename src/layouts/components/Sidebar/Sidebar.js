@@ -116,14 +116,14 @@ function Sidebar() {
 
                         <div className={cx('footer')}>
                             <div className={cx('wrapper-img')}>
-                                <p className={cx('wrapper-title')}>
+                                <div className={cx('wrapper-title')}>
                                     <EffectIcon className={cx('icon')} />
                                     <p className={cx('title')}>Create effects</p>
-                                </p>
+                                </div>
                             </div>
                         </div>
                         <div className={cx('linker')}>
-                            <p className={cx('link-container')}>
+                            <div className={cx('link-container')}>
                                 <a target={'_blank'} href="/" className={cx('crt')}>
                                     About
                                 </a>
@@ -139,10 +139,10 @@ function Sidebar() {
                                 <a target={'_blank'} href="/" className={cx('crt')}>
                                     ByteDance
                                 </a>
-                            </p>
+                            </div>
                         </div>
                         <div className={cx('linker')}>
-                            <p className={cx('link-container')}>
+                            <div className={cx('link-container')}>
                                 <a target={'_blank'} href="/" className={cx('crt')}>
                                     Tiktok for Good
                                 </a>
@@ -164,10 +164,10 @@ function Sidebar() {
                                 <a target={'_blank'} href="/" className={cx('crt')}>
                                     TikTok Embeds
                                 </a>
-                            </p>
+                            </div>
                         </div>
                         <div className={cx('linker')}>
-                            <p className={cx('link-container')}>
+                            <div className={cx('link-container')}>
                                 <a target={'_blank'} href="/" className={cx('crt')}>
                                     Help
                                 </a>
@@ -186,14 +186,14 @@ function Sidebar() {
                                 <a target={'_blank'} href="/" className={cx('crt')}>
                                     Community Guidelines
                                 </a>
-                            </p>
+                            </div>
                         </div>
                         <div className={cx('linker')}>
-                            <p className={cx('link-container')}>
+                            <div className={cx('link-container')}>
                                 <a target={'_blank'} href="/" className={cx('create')}>
                                     © 2023 TikTok create by xhiep
                                 </a>
-                            </p>
+                            </div>
                         </div>
                     </Menu>
                 </Scrollbars>

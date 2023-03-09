@@ -1,5 +1,96 @@
-.wrapper {
+.footer {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid rgba(22, 24, 35, 0.12);
     width: 356px;
     padding: 20px 0 26px 8px;
     margin-left: -19px;
+    position: relative;
+}
+//cus Create effects
+
+.wrapper-img {
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+    background-image: url(https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/tiktok/webapp/main/webapp-desktop/045b2fc7c278b9a30dd0.png);
+    background-size: contain;
+    background-position: center;
+    width: 90%;
+    height: 52px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.wrapper-title {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    align-items: center;
+    transition: transform 0.2s ease;
+    width: 100%;
+    padding: 10px;
+    &:hover {
+        cursor: pointer;
+        color: rgb(22, 24, 35);
+        transform: scale(1.05);
+    }
+}
+.title {
+    font-size: 1.6rem;
+    color: rgba(22, 24, 35, 1);
+    font-family: var(--font-family);
+    font-weight: 600;
+}
+.icon {
+    width: 19px;
+}
+//
+.link-container {
+    display: inline-flex;
+    margin-left: 5px;
+    flex-wrap: wrap;
+    min-height: 20px;
+}
+.linker {
+    margin-top: 8px;
+}
+.crt {
+    color: rgba(22, 24, 35, 0.5);
+    transition: color 250ms ease 0s;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 1.2rem;
+    line-height: 17px;
+    display: inline-block;
+    margin-right: 6px;
+    margin-top: 5px;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+.create {
+    color: rgba(22, 24, 35, 0.5);
+    transition: color 250ms ease 0s;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 1.2rem;
+    line-height: 17px;
+    display: inline-block;
+    margin-right: 6px;
+    margin-top: 5px;
+}
+
+// Customize React-Custom-Scrollbars
+.inner-fixed {
+    position: fixed;
+    width: 25%;
+    height: 90%;
+    z-index: 9999;
+}
+.scroll {
+    height: 40px;
 }

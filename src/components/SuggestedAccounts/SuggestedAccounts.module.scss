@@ -1,6 +1,7 @@
 .wrapper {
     border-top: 1px solid rgba(22, 24, 35, 0.12);
     cursor: pointer;
+    padding-bottom: 16px;
 }
 .label {
     margin-top: 16px;
@@ -56,4 +57,5 @@
     font-size: 1.4rem;
     line-height: 20px;
     cursor: pointer;
+    padding: 6px 0px 0 6px;
 }

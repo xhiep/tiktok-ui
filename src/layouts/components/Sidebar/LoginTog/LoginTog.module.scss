@@ -1,0 +1,19 @@
+.login-tog {
+    display: flex;
+    width: 100%;
+    padding: 20px 8px 24px 8px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-top: 1px solid rgba(22, 24, 35, 0.12);
+}
+.title {
+    color: rgba(22, 24, 35, 0.5);
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.btn-login {
+    width: 100%;
+    margin-top: 20px;
+}
